@@ -1,2 +1,1 @@
-/01_SimplestFlaskWebServer/*.pyc
-/02_Network/__pycache__/*.pyc
+*.pyc

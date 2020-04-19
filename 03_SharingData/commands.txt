@@ -1,0 +1,3 @@
+docker image build -t web3 .
+docker container run --rm -itd -p 5000:5000 -e FLASK_APP=app.py -e FLASK_DEBUG=1 --name web3 --net firstnetwork -v D:/projects/dockerPlayground/03_SharingData:/app web3
+docker container run --rm -itd -p 6379:6379 --name redis --net firstnetwork -v web2_redis:/data --volumes-from web3  redis:3.2-alpine
