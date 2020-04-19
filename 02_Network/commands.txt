@@ -15,3 +15,10 @@ docker exec web2 ping redis
 
 docker exec -it redis redis-cli
 INCRBY web2_counter 1000
+
+
+
+docker volume ls
+docker volume create web2_redis
+docker volume inspect web2_redis
+docker container run --rm -itd -p 6379:6379 --name redis --net firstnetwork -v web2_redis:/data redis:3.2-alpine
