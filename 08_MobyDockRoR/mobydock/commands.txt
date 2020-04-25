@@ -1,0 +1,3 @@
+ docker run -it --rm -v "D:\projects\dockerPlayground\08_MobyDockRoR":/usr/src/app -w /usr/src/app rails:4 rails new --skip-bundle mobydock
+ docker-compose run mobydock run mobydock rake db:reset
+ docker-compose run mobydock run mobydock rake db:seed
